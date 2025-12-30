@@ -10,7 +10,7 @@
         "allowImportingTsExtensions": true,
         "resolveJsonModule": true,
         "isolatedModules": true,
-        "noEmit": true,
+        "composite": true,
         "strict": true,
         "noUnusedLocals": true,
         "noUnusedParameters": true,
@@ -19,7 +19,6 @@
         "allowSyntheticDefaultImports": true
     },
     "include": [
-        "vite.config.ts",
-        "server"
+        "vite.config.ts"
     ]
 }
