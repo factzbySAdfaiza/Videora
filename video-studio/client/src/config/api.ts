@@ -1,7 +1,7 @@
 // API Configuration
 // Set VITE_API_URL in your .env file for production
 
-export const API_URL = import.meta.env.VITE_API_URL || 'videorabackend-production.up.railway.app';
+export const API_URL = import.meta.env.VITE_API_URL || 'https://videorabackend-production.up.railway.app';
 
 // API endpoints
 export const API = {
