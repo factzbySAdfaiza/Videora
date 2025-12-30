@@ -23,6 +23,7 @@
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
     "baseUrl": ".",
+    "types": ["vite/client"],
     "paths": {
       "@/*": [
         "./client/*"
@@ -30,7 +31,8 @@
     }
   },
   "include": [
-    "client"
+    "client",
+    "client/src/vite-env.d.ts"
   ],
   "references": [
     {
