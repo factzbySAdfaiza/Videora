@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useAuth } from '../contexts/AuthContext'
 import { Template, VideoSettings as VideoSettingsType } from '../types'
-import { DEFAULT_VIDEO_SETTINGS, MULTI_SEGMENT_THRESHOLD } from '../constants/videoSettings'
+import { DEFAULT_VIDEO_SETTINGS } from '../constants/videoSettings'
 import { saveToHistory } from '../utils/videoHistory'
 import TemplateGallery from '../components/TemplateGallery'
 import TemplateEditor from '../components/TemplateEditor'
@@ -19,7 +19,7 @@ export default function Dashboard() {
     const [prompt, setPrompt] = useState('')
     const [tsxCode, setTsxCode] = useState('')
     const [loading, setLoading] = useState(false)
-    const [jobId, setJobId] = useState<string | null>(null)
+    const [, setJobId] = useState<string | null>(null)
     const [status, setStatus] = useState<any>(null)
     const [videoUrl, setVideoUrl] = useState<string | null>(null)
     const [selectedTemplate, setSelectedTemplate] = useState<Template | null>(null)

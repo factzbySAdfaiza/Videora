@@ -133,7 +133,7 @@ export function estimateFileSize(
   duration: number,
   width: number,
   height: number,
-  fps: number,
+  _fps: number,
   quality: 'draft' | 'standard' | 'high' | 'ultra'
 ): number {
   // Bitrate estimates in bits per second

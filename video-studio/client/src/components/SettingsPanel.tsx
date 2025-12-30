@@ -1,4 +1,4 @@
-import { VideoSettings as VideoSettingsType, QualityPreset, AspectRatio } from '../types';
+import { VideoSettings as VideoSettingsType, AspectRatio } from '../types';
 import {
     RESOLUTION_PRESETS,
     FPS_OPTIONS,

@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { VideoHistoryEntry } from '../types';
 import { getHistoryPaginated, deleteHistoryEntry, getHistoryStats } from '../utils/videoHistory';
-import { formatFileSize } from '../utils/templateRenderer';
 
 export default function VideoHistoryPanel() {
     const [history, setHistory] = useState<VideoHistoryEntry[]>([]);

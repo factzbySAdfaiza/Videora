@@ -1,5 +1,5 @@
 import { VideoSettings as VideoSettingsType, QualityPreset } from '../types';
-import { PLATFORM_PRESETS, QUALITY_PRESET_CONFIGS, RESOLUTION_PRESETS } from '../constants/videoSettings';
+import { PLATFORM_PRESETS, QUALITY_PRESET_CONFIGS } from '../constants/videoSettings';
 
 interface PlatformSelectorProps {
     settings: VideoSettingsType;
