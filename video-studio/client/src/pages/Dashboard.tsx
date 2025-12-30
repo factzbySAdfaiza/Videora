@@ -3,6 +3,7 @@ import { useAuth } from '../contexts/AuthContext'
 import { Template, VideoSettings as VideoSettingsType } from '../types'
 import { DEFAULT_VIDEO_SETTINGS } from '../constants/videoSettings'
 import { saveToHistory } from '../utils/videoHistory'
+import { API } from '../config/api'
 import TemplateGallery from '../components/TemplateGallery'
 import TemplateEditor from '../components/TemplateEditor'
 import VideoHistoryPanel from '../components/VideoHistoryPanel'
@@ -40,7 +41,7 @@ export default function Dashboard() {
         const startTime = Date.now()
 
         try {
-            const endpoint = createMode === 'ai' ? '/api/generate-ai' : '/api/generate'
+            const endpoint = createMode === 'ai' ? API.generateAI : API.generate
             const codeToUse = code || tsxCode
             const config = {
                 duration: videoSettings.duration,
@@ -70,12 +71,12 @@ export default function Dashboard() {
     const pollStatus = async (id: string, startTime: number) => {
         const interval = setInterval(async () => {
             try {
-                const res = await fetch(`/api/status/${id}`)
+                const res = await fetch(API.status(id))
                 const data = await res.json()
                 setStatus(data)
                 if (data.status === 'completed') {
                     clearInterval(interval)
-                    const videoPath = `/api/video/${id}`
+                    const videoPath = API.video(id)
                     setVideoUrl(videoPath)
                     setLoading(false)
                     const generationTime = Date.now() - startTime
